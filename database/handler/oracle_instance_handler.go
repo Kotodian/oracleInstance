@@ -14,7 +14,7 @@ var task *cron.Cron
 func RegisterDatabaseHandler(router *gin.Engine) {
 	dataBaseHandler := router.Group("/api/v1/database")
 	//dataBaseHandler.GET("", findOracleInstancePager)
-	dataBaseHandler.GET("", oracleInstanceList)
+	dataBaseHandler.GET("", findOracleInstancePager)
 	dataBaseHandler.POST("", insertOracleInstance)
 	dataBaseHandler.GET("/:id", findOracleInstanceById)
 	dataBaseHandler.DELETE("", deleteOracleInstance)
