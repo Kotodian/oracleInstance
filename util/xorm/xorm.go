@@ -10,7 +10,7 @@ import (
 var engine *xorm.Engine
 
 func init() {
-	dataSource := "root:7kK@164173520@tcp(119.45.71.74:3306)/oracle?charset=utf8"
+	dataSource := "root:7kK@164173520@tcp(localhost:3306)/oracle?charset=utf8"
 	engine, err := newEngine(dataSource)
 	if err != nil {
 		panic(err)
